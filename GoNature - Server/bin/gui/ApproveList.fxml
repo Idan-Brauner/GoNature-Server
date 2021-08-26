@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ApproveListController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="572.0" prefWidth="749.0">
+         <children>
+            <Label layoutX="284.0" layoutY="14.0" text="Approve List">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="35.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.49523809523809526" radius="1.0">
+                     <stops>
+                        <Stop color="#27610f" />
+                        <Stop color="#00ff44" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="btnApprove" layoutX="619.0" layoutY="484.0" mnemonicParsing="false" onAction="#Approve" prefHeight="31.0" prefWidth="84.0" text="Approve">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <TableView fx:id="tableApproveList" layoutX="38.0" layoutY="127.0" onMouseClicked="#displaySelected" prefHeight="281.0" prefWidth="694.0">
+              <columns>
+                <TableColumn fx:id="txtPark" prefWidth="102.0" text="Park Name" />
+                  <TableColumn fx:id="txtRequest" prefWidth="120.0" text="Request for Update" />
+                  <TableColumn fx:id="txtStarDate" prefWidth="147.0" text="Start Date" />
+                  <TableColumn fx:id="txtFinishDate" prefWidth="143.0" text="Finish Date" />
+                  <TableColumn fx:id="txtRequestStatus" prefWidth="181.0" text="Request Status" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtMessage" layoutX="38.0" layoutY="408.0" mouseTransparent="true" prefHeight="45.0" prefWidth="694.0" />
+            <Button fx:id="btnDisplayV" layoutX="67.0" layoutY="86.0" mnemonicParsing="false" onAction="#DisplayV" prefHeight="31.0" prefWidth="143.0" text="Display Visitors Request" />
+            <Button fx:id="btnDecline" layoutX="492.0" layoutY="484.0" mnemonicParsing="false" onAction="#Decline" prefHeight="31.0" prefWidth="84.0" text="Decline">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="btnDisplayDiscount" layoutX="225.0" layoutY="86.0" mnemonicParsing="false" onAction="#DisplayDiscount" prefHeight="31.0" prefWidth="170.0" text="Display Discount Request" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

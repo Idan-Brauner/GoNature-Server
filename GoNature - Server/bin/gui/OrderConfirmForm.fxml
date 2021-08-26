@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.OrderConfirmController">
+   <children>
+      <Text layoutX="100.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O R D E R   C O N F I R M A T I O N" wrappingWidth="536.880859375">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <Label layoutX="290.0" layoutY="27.0" text="GoNature">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.49523809523809526" radius="1.0">
+               <stops>
+                  <Stop color="#1a4d05" />
+                  <Stop color="#00dd3b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="memberID" disable="true" layoutX="290.0" layoutY="146.0" />
+      <Text layoutX="169.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID / Member ID:" />
+      <Text layoutX="203.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:" />
+      <Text layoutX="238.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+      <Text layoutX="237.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+      <TextField fx:id="fullName" disable="true" layoutX="290.0" layoutY="200.0" />
+      <TextField fx:id="txtPrice" alignment="CENTER" disable="true" editable="false" layoutX="284.0" layoutY="355.0" />
+      <Text layoutX="144.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#Visitors" />
+      <TextField fx:id="txtVisitorsNum" alignment="CENTER" disable="true" editable="false" layoutX="208.0" layoutY="308.0" prefHeight="31.0" prefWidth="36.0" />
+      <DatePicker fx:id="btnDateSelect" disable="true" editable="false" layoutX="290.0" layoutY="251.0" opacity="0.69" prefHeight="31.0" prefWidth="187.0" />
+      <Button fx:id="btnBack" layoutX="60.0" layoutY="370.0" mnemonicParsing="false" onAction="#getBackBtn" text="Back" />
+      <Button fx:id="btnConfirm" layoutX="591.0" layoutY="370.0" mnemonicParsing="false" onAction="#getConfirmBtn" text="Confirm" />
+      <Text layoutX="250.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" />
+      <ComboBox fx:id="btnHourSelect" disable="true" editable="true" layoutX="297.0" layoutY="308.0" prefHeight="31.0" prefWidth="97.0" />
+      <Text layoutX="409.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At Park:" />
+      <ComboBox fx:id="btnParkSelect" disable="true" editable="true" layoutX="470.0" layoutY="308.0" prefHeight="31.0" prefWidth="123.0" />
+   </children>
+</AnchorPane>

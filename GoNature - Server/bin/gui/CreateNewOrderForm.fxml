@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VisitorOrdersController">
+   <children>
+      <AnchorPane prefHeight="419.0" prefWidth="700.0">
+         <children>
+            <TextField fx:id="txtVisitorsNum" layoutX="266.0" layoutY="238.0" promptText="1-15" />
+            <TextField fx:id="txtEmail" layoutX="265.0" layoutY="294.0" promptText="example@gmail.com" />
+            <ComboBox fx:id="btnParkSelect" layoutX="266.0" layoutY="121.0" prefHeight="31.0" prefWidth="236.0" promptText="#Park" />
+            <Text layoutX="172.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Select Park:" />
+            <DatePicker fx:id="btnDateSelect" layoutX="266.0" layoutY="179.0" prefHeight="31.0" prefWidth="157.0" promptText="DD/MM/YYYY" />
+            <ComboBox fx:id="btnHourSelect" editable="true" layoutX="494.0" layoutY="179.0" prefHeight="31.0" prefWidth="91.0" />
+            <Text layoutX="171.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Select Date:" />
+            <Text layoutX="440.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" />
+            <Text layoutX="121.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Number of Visitors:" />
+            <Text layoutX="210.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Email:" />
+            <Button fx:id="btnMakeOrder" layoutX="427.0" layoutY="361.0" mnemonicParsing="false" onAction="#makeOrder" text="Make Order" />
+            <Button fx:id="btnBack" layoutX="204.0" layoutY="361.0" mnemonicParsing="false" onAction="#getBackBtn" text="Cancel" />
+            <Label layoutX="146.0" layoutY="27.0" text="N E W   O R D E R   F O R M">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="33.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.49523809523809526" radius="1.0">
+                     <stops>
+                        <Stop color="#1a4d05" />
+                        <Stop color="#00dd3b" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

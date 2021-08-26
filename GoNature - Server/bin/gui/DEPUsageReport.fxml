@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DEPUsageReportController">
+   <children>
+      <AnchorPane prefHeight="561.0" prefWidth="623.0">
+         <children>
+            <Label layoutX="192.0" layoutY="14.0" text="Usage Report of all parks">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="23.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.49523809523809526" radius="1.0">
+                     <stops>
+                        <Stop color="#27610f" />
+                        <Stop color="#00ff44" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="btnShow" layoutX="270.0" layoutY="484.0" mnemonicParsing="false" onAction="#Show_show" prefHeight="45.0" prefWidth="177.0" text="Show">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <Text layoutX="211.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Park:">
+               <font>
+                  <Font size="17.0" />
+               </font></Text>
+            <ComboBox fx:id="ParkType_comboBox" layoutX="297.0" layoutY="54.0" prefHeight="37.0" prefWidth="150.0" promptText="Select Park" />
+            <Text layoutX="177.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select month:" wrappingWidth="103.99999774992466">
+               <font>
+                  <Font size="17.0" />
+               </font></Text>
+            <ComboBox fx:id="Month_comboBox" layoutX="297.0" layoutY="108.0" prefHeight="37.0" prefWidth="150.0" promptText="Select Month" />
+            <TableView fx:id="TableData" layoutX="230.0" layoutY="160.0" prefHeight="313.0" prefWidth="242.0">
+               <columns>
+                  <TableColumn fx:id="ColDate" prefWidth="241.0" text="Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SystemLogInController">
+   <left>
+      <AnchorPane prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="400.0">
+               <image>
+                  <Image url="@../../res/BG.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="120.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Go">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="172.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nature">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="200.0" fitWidth="199.0" layoutX="99.0" layoutY="161.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/logo%20white.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="idNumtxt" layoutX="112.0" layoutY="279.0" onMouseClicked="#cleanErrors" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #BFDACB#BFDACB; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="pw" layoutX="113.0" layoutY="341.0" onMouseClicked="#cleanErrors" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #BFDACB#BFDACB; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btnlogIn" layoutX="163.0" layoutY="405.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #46E38A;" text="LOGIN" textAlignment="CENTER" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="49.0" layoutX="131.0" layoutY="35.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/line%202.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="50.0" layoutX="226.0" layoutY="35.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/line1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitWidth="25.0" layoutX="82.0" layoutY="344.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/lock.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="83.0" layoutY="282.0">
+               <image>
+                  <Image url="@../../res/user.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnquick" layoutX="137.0" layoutY="453.0" mnemonicParsing="false" onAction="#enterQuick" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #32D2EA;" text="QUICK ENTER" textAlignment="CENTER" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="163.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../res/logo%20black.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="166.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Text>
+            <Hyperlink layoutX="78.0" layoutY="567.0" text="Contact us on GoNature@gmail.com" />
+            <ImageView disable="true" fitHeight="256.0" fitWidth="258.0" layoutX="79.0" layoutY="47.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/welcome.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="idError" fill="#ff6060" layoutX="307.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="pwError" fill="#ff6060" layoutX="307.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

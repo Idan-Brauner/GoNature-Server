@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EditOrderController">
+   <children>
+      <AnchorPane prefHeight="419.0" prefWidth="700.0" />
+      <TextField fx:id="txtVisitorsNum" layoutX="276.0" layoutY="248.0" />
+      <TextField fx:id="txtEmail" layoutX="275.0" layoutY="304.0" />
+      <ComboBox fx:id="btnParkSelect" layoutX="276.0" layoutY="131.0" prefHeight="31.0" prefWidth="236.0" />
+      <Text layoutX="182.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Select Park:" />
+      <ComboBox fx:id="btnHourSelect" layoutX="504.0" layoutY="189.0" prefHeight="31.0" prefWidth="91.0" />
+      <Text layoutX="181.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Select Date:" />
+      <Text layoutX="450.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" />
+      <Text layoutX="131.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Number of Visitors:" />
+      <Text layoutX="220.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Email:" />
+      <Button fx:id="btnSaveChanges" layoutX="437.0" layoutY="371.0" mnemonicParsing="false" onAction="#saveChanges" text="Save Changes" />
+      <Button fx:id="btnBack" layoutX="214.0" layoutY="371.0" mnemonicParsing="false" onAction="#getBackBtn" text="Back" />
+      <Label layoutX="290.0" layoutY="27.0" text="GoNature">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.49523809523809526" radius="1.0">
+               <stops>
+                  <Stop color="#1a4d05" />
+                  <Stop color="#00dd3b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Text layoutX="158.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E D I T   O R D E R   F O R M">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="btnDateSelect" layoutX="276.0" layoutY="188.0" prefHeight="31.0" prefWidth="157.0" />
+      <Button fx:id="btnCancelOrder" layoutX="567.0" layoutY="371.0" mnemonicParsing="false" onAction="#getCancelBtn" text="Cancel Order" />
+   </children>
+</AnchorPane>
